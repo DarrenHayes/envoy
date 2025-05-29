@@ -1,0 +1,19 @@
+{
+  "name": "app",
+  "version": "1.0.0",
+  "main": "index.js",
+  "engines": {
+    "node": "v23.11.0"
+  },
+  "scripts": {
+    "start": "node index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "@envoy/envoy-integrations-sdk": "^2.3.2",
+    "express": "^5.1.0"
+  }
+}
