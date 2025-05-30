@@ -11,6 +11,11 @@ app.use(middleware());
 //const PORT = 3000;  //for local testing
 const PORT = process.env.PORT || 3000;
 
+// Basic root route to test.
+app.get('/', (req, res) => {
+  res.send('Hello Goodbye app is running');
+});
+
 // Start the server
 app.listen(PORT, () => {
   console.log(`Server is running on http://localhost:${PORT}`);
