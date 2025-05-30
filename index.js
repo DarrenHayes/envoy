@@ -47,7 +47,7 @@ app.post('/goodbye-options', (req, res) => {
 app.post('/visitor-sign-in', async (req, res) => {
   const envoy = req.envoy; // our middleware adds an "envoy" object to req.
   const job = envoy.job;
-  const hello = envoy.meta.config.HELLO;
+  const hello = envoy.meta.config.hello-options;
   const visitor = envoy.payload;
   const visitorName = visitor.attributes['full-name'];
   
@@ -64,7 +64,7 @@ app.post('/visitor-sign-in', async (req, res) => {
 app.post('/visitor-sign-out', async (req, res) => {
   const envoy = req.envoy; // our middleware adds an "envoy" object to req.
   const job = envoy.job;
-  const goodbye = envoy.meta.config.GOODBYE;
+  const goodbye = envoy.meta.config.goodbye-options;
   const visitor = envoy.payload;
   const visitorName = visitor.attributes['full-name'];
 
