@@ -7,6 +7,15 @@ const { middleware, errorMiddleware } = require('@envoy/envoy-integrations-sdk')
 const app = express();
 app.use(middleware());
 
+// Define the port the server will run on
+//const PORT = 3000;  //for local testing
+const PORT = process.env.PORT || 3000;
+
+// Start the server
+app.listen(PORT, () => {
+  console.log(`Server is running on http://localhost:${PORT}`);
+});
+
 // use our app object to define our app's endpoints. Let's start with a route that sends back available options for the "preferred hello" dropdown that we saw in the overview screenshot.
 app.post('/hello-options', (req, res) => {
   res.send([
